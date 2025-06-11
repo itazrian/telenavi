@@ -1,11 +1,11 @@
 # talenavi 090625 from Irvan T.
 
-2. INFORMATION 
+1. INFORMATION 
 - Laravel Framework 8.83.29
 - PHP 7.4.33 
 - composer require maatwebsite/excel:^3.1 --with-all-dependencies
 
-3. DATABASE
+2. DATABASE
    
 CREATE DATABASE `test_telenavi_090625` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 

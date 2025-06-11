@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "e4e1916d-d9ab-495c-8042-1844beb2ef6a",
+		"name": "Telenavi #090625",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3021851",
+		"_collection_link": "https://dark-moon-246338.postman.co/workspace/Test~e043c64b-b4ca-4790-8fdd-0c215f3a0ab8/collection/3021851-e4e1916d-d9ab-495c-8042-1844beb2ef6a?action=share&source=collection_link&creator=3021851"
+	},
+	"item": [
+		{
+			"name": "todolist/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Learn Postgree\",\n    \"assignee\": \"John Due\",\n    \"due_date\": \"2025-06-10\",\n    \"time_tracked\": 11.5,\n    \"status\": \"completed\",\n    \"priority\": \"medium\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todolist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todolist"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://127.0.0.1:8000/api/users'\n--header 'Content-Type: application/json'\n--data-raw '{ \"email\": \"example1@example.tes\", \"password\": \"example1\", \"name\": \"John Doe 2\" }'"
+			},
+			"response": []
+		},
+		{
+			"name": "todolist/export",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todolist/export?title=&assignee=John Due&start=2025-06-01&end=2025-06-30&min=0&max=1000&status=open,pending,completed&priority=low,high,medium",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todolist",
+						"export"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": ""
+						},
+						{
+							"key": "assignee",
+							"value": "John Due"
+						},
+						{
+							"key": "start",
+							"value": "2025-06-01"
+						},
+						{
+							"key": "end",
+							"value": "2025-06-30"
+						},
+						{
+							"key": "min",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "1000"
+						},
+						{
+							"key": "status",
+							"value": "open,pending,completed"
+						},
+						{
+							"key": "priority",
+							"value": "low,high,medium"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todolist/chart",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todolist/chart?type=assignee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todolist",
+						"chart"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "assignee"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
